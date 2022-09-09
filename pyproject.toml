@@ -1,0 +1,17 @@
+[tool.black]
+line-length = 100
+py_version=310
+
+[tool.flake8]
+max-line-length = 100
+exclude = [".git","*.pytest_cache*","build"]
+max-complexity = 10
+extend-ignore = """
+        W503,
+        E203,
+        E701,
+    """
+    per-file-ignores = """
+        __init__.py: F401
+        ./src/*: E402
+    """
